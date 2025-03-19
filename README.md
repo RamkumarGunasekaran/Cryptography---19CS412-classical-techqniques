@@ -18,7 +18,7 @@ Design of Caeser Cipher algorithnm
 scheme, A = 0, B = 1, Z = 25.
 4. Encryption of a letter x by a shift n can be described mathematically as, En(x) = (x + n) mod26
 5. Decryption is performed similarly, Dn (x)=(x - n) mod26
-# PROGRAM
+## PROGRAM
 ```
 PROGRAM 01;
 #include <stdio.h>
@@ -65,16 +65,16 @@ void main()
 }
 
 ```
-# OUTPUT
+## OUTPUT
 ![Screenshot 2025-03-19 092418](https://github.com/user-attachments/assets/4a873196-c249-409a-a9f2-72d31ae91ec3)
 
-# RESULT:
+## RESULT:
 The program is executed successfully.
 
-## PlayFair Cipher
+# PlayFair Cipher
 Playfair Cipher using with different key values
 
-## AIM:
+# AIM:
 To implement a program to encrypt a plain text and decrypt a cipher text using play fair Cipher substitution technique.
 
 ## DESIGN STEPS:
