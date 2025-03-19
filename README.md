@@ -238,7 +238,7 @@ int main() {
     printf("Simulating Playfair Cipher\n");
     strcpy(key, "Monopoly");
     printf("Key text: %s\n", key);
-    strcpy(str, "PRITHISH");
+    strcpy(str, "RAMKUMAR");
     printf("Plain text: %s\n", str);
     encryptByPlayfairCipher(str, key);
     printf("Cipher text: %s\n", str);
@@ -246,8 +246,10 @@ int main() {
     printf("Decrypted text: %s\n", str);
     return 0;
 }
+
 ```
 ## OUTPUT:
+![Screenshot 2025-03-19 142747](https://github.com/user-attachments/assets/75d62ffb-93c7-4352-956d-b47b3e4029e1)
 
 
 ## RESULT:
