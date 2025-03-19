@@ -70,7 +70,8 @@ void main()
 
 ## RESULT:
 The program is executed successfully.
-
+## NAME: RAMKUMAR G
+## REG NO: 212223220084
 # PlayFair Cipher
 Playfair Cipher using with different key values
 
