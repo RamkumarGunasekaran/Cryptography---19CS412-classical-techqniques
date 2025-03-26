@@ -398,6 +398,9 @@ void main()
 ## RESULT:
 The program is executed successfully
 
+
+## NAME: RAMKUMAR G
+## REG NO: 212223220084
 # Rail Fence Cipher
 Rail Fence Cipher using with different key values
 
@@ -412,21 +415,54 @@ Design of Rail Fence Cipher algorithnm
 Implementation using C or pyhton code
 
 ## Step 3:
-Testing algorithm with different key values. ALGORITHM DESCRIPTION: In the rail fence cipher, the plaintext is written downwards and diagonally on successive "rails" of an imaginary fence, then moving up when we reach the bottom rail. When we reach the top rail, the message is written downwards again until the whole plaintext is written out. The message is then read off in rows.
+Testing algorithm with different key values. 
 
 ## PROGRAM:
-PROGRAM: #include<stdio.h> #include<string.h> #include<stdlib.h> main() { int i,j,len,rails,count,code[100][1000]; char str[1000]; printf("Enter a Secret Message\n"); gets(str); len=strlen(str); printf("Enter number of rails\n"); scanf("%d",&rails); for(i=0;i<rails;i++) { for(j=0;j<len;j++) { code[i][j]=0; } } count=0; j=0; while(j<len) { if(count%2==0) { for(i=0;i<rails;i++) { //strcpy(code[i][j],str[j]); code[i][j]=(int)str[j]; j++; }
+```
+ #include <stdio.h>
+ #include <string.h>
+ int main() {
+ int i, j, k, l;
+ char a[20], c[20], d[20];
+ printf("\n\t\tRAIL FENCE TECHNIQUE\n");
+ printf("\nEnter the input string: ");
+ fgets(a, sizeof(a), stdin);
+a[strcspn(a, "\n")] = '\0';
+ l = strlen(a);
+ for (i = 0, j = 0; i < l; i++) {
+ if (i % 2 == 0) {
+ c[j++] = a[i];
+ }
+ }
+ for (i = 0; i < l; i++) {
+ if (i % 2 == 1) {
+ c[j++] = a[i];
+ }
+ }
+ c[j] = '\0'; 
+ printf("\nCipher text after applying rail fence: %s\n", c);
+ if (l % 2 == 0) {
+ k =l / 2;
+ } else {
+ k =(l / 2) + 1;
+ }
+ for (i = 0, j = 0; i < k; i++) {
+ d[j] = c[i];
+ j += 2;
+ }
+ for (i = k, j = 1; i < l; i++) {
+d[j] = c[i];
+ j += 2;
+ }
+ d[l] = '\0';
+ printf("\nText after decryption: %s\n", d);
+ return 0; 
+ }
+```
 
-} else {
-
-for(i=rails-2;i>0;i--) { code[i][j]=(int)str[j]; j++; } }
-
-count++; }
-
-for(i=0;i<rails;i++) { for(j=0;j<len;j++) { if(code[i][j]!=0) printf("%c",code[i][j]); } } printf("\n"); }
 
 ## OUTPUT:
-OUTPUT: Enter a Secret Message wearediscovered Enter number of rails 2 waeicvrderdsoee
+![Screenshot 2025-03-26 085141](https://github.com/user-attachments/assets/307f6fdd-9c18-4dd0-bf4f-6ae8567d5286)
 
 ## RESULT:
 The program is executed successfully
