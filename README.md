@@ -73,6 +73,7 @@ The program is executed successfully.
 -----------------------------------------------------------------
 ## NAME: RAMKUMAR G
 ## REG NO: 212223220084
+
 # PlayFair Cipher
 Playfair Cipher using with different key values
 
@@ -260,6 +261,7 @@ The program is executed successfully
 ## NAME: RAMKUMAR G
 ## REG NO: 212223220084
 
+
 # Hill Cipher
 Hill Cipher using with different key values
 
@@ -313,6 +315,11 @@ int main()
 ## RESULT:
 The program is executed successfully
 
+
+## NAME: RAMKUMAR G
+## REG NO: 212223220084
+
+
 # Vigenere Cipher
 Vigenere Cipher using with different key values
 
@@ -327,21 +334,58 @@ Design of Vigenere Cipher algorithnm
 Implementation using C or pyhton code
 
 ## Step 3:
-Testing algorithm with different key values. ALGORITHM DESCRIPTION: The Vigenere cipher is a method of encrypting alphabetic text by using a series of different Caesar ciphers based on the letters of a keyword. It is a simple form of polyalphabetic substitution.To encrypt, a table of alphabets can be used, termed a Vigenere square, or Vigenere table. It consists of the alphabet written out 26 times in different rows, each alphabet shifted cyclically to the left compared to the previous alphabet, corresponding to the 26 possible Caesar ciphers. At different points in the encryption process, the cipher uses a different alphabet from one of the rows used. The alphabet at each point depends on a repeating keyword.
-
+Testing algorithm with different key values. 
 ## PROGRAM:
-PROGRAM: #include<stdio.h> #include<string.h> //FunctiontoperformVigenereencryption voidvigenereEncrypt(chartext,constcharkey){ inttextLen= strlen(text); intkeyLen=strlen(key); for(inti =0;i< textLen;i++){ charc =text[i]; if(c>='A'&&c<='Z'){ //Encryptuppercaseletters text[i]=((c-'A'+key[i%keyLen]-'A')%26)+'A'; }else if(c>='a'&&c<='z'){ //Encryptlowercaseletters text[i]=((c-'a'+key[i%keyLen]-'A')%26)+'a'; } } } //FunctiontoperformVigeneredecryption voidvigenereDecrypt(chartext,constcharkey){ inttextLen= strlen(text); intkeyLen=strlen(key);
+```
 
-for(inti =0;i< textLen;i++){ charc =text[i]; if(c>='A'&&c<='Z'){ //Decryptuppercaseletters
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+void main()
 
-text[i]=((c-'A'-(key[i% keyLen]-'A') +26) %26)+ 'A'; }else if(c>='a'&&c<='z'){ //Decryptlowercaseletters text[i]=((c-'a'-(key[i% keyLen]-'A') +26) %26)+ 'a'; } } } intmain(){ constchar *key="KEY";//Replacewithyourdesired key char message[]= "Thisisasecretmessage.";//Replace withyourmessage //Encrypt themessage vigenereEncrypt(message,key); printf("EncryptedMessage:%s\n",message); //Decrypt themessage backtotheoriginal vigenereDecrypt(message,key); printf("DecryptedMessage:%s\n",message); Return 0;
+{
+    char plain[10],cipher[10];
+    int key,i,length;
+    int result;
+    printf("\n Enter the plain text:");
+    scanf("%s", plain);
+    printf("\n Enter the key value:");
+    scanf("%d", &key);
+    printf("\n \n \t PLAIN TEXt: %s", plain);
+    printf("\n \n \t ENCRYPTED TEXT:");
+    for(i=0, length = strlen(plain); i<length; i++)
+    {
+        
+        cipher[i]=plain[i] + key;
+        if (isupper(plain[i]) && (cipher[i] > 'Z'))
+        cipher[i] = cipher[i] - 26;
+        if (islower(plain[i]) && (cipher[i] > 'z'))
+        cipher[i] = cipher[i] - 26;
+        printf("%c", cipher[i]);
+
+    }
+    printf("\n \n \t AFTER DECRYPTION : ");
+    for(i=0;i<length;i++)
+    {
+        
+        plain[i]=cipher[i]-key;
+        if(isupper(cipher[i])&&(plain[i]<'A'))
+        plain[i]=plain[i]+26;
+        if(islower(cipher[i])&&(plain[i]<'a'))
+        plain[i]=plain[i]+26;
+        printf("%c",plain[i]);
+    }
+
+    
+}
+
+
+```
 
 ## OUTPUT:
-OUTPUT :
 
-Simulating Vigenere Cipher
+![Screenshot 2025-03-26 084300](https://github.com/user-attachments/assets/c5e41c20-3974-422f-a7d6-87555f6f00b2)
 
-Input Message : SecurityLaboratory Encrypted Message : NMIYEMKCNIQVVROWXC Decrypted Message : SECURITYLABORATORY
 
 ## RESULT:
 The program is executed successfully
