@@ -1,6 +1,7 @@
 ## NAME: RAMKUMAR G
 ## REG NO: 212223220084
 
+
 # Cryptography---19CS412-classical-techniques
 # Caeser Cipher
 Caeser Cipher using with different key values
@@ -70,9 +71,12 @@ void main()
 
 ## RESULT:
 The program is executed successfully.
------------------------------------------------------------------
+
+
+
 ## NAME: RAMKUMAR G
 ## REG NO: 212223220084
+
 
 # PlayFair Cipher
 Playfair Cipher using with different key values
@@ -257,9 +261,11 @@ int main() {
 
 ## RESULT:
 The program is executed successfully
--------------------------------------------------------------------
+
+
 ## NAME: RAMKUMAR G
 ## REG NO: 212223220084
+
 
 
 # Hill Cipher
@@ -316,8 +322,10 @@ int main()
 The program is executed successfully
 
 
+
 ## NAME: RAMKUMAR G
 ## REG NO: 212223220084
+
 
 
 # Vigenere Cipher
